@@ -72,7 +72,7 @@
     <div class="row">
        
                             
-            <a class="btn btn-info fixed-bottom" href= history.php target=_blank><h4>View History</h4></a>
+            <a class="btn btn-info " href= history.php target=_blank><h4>View History</h4></a>
 
     </div>
     
