@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Apr 21, 2021 at 04:31 PM
+-- Generation Time: Apr 24, 2021 at 10:34 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.21
 
@@ -67,16 +67,19 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `movie_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `movie_id` (`movie_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=122 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `reservation`
 --
 
 INSERT INTO `reservation` (`id`, `fullname`, `contact`, `no_of_seats`, `seat_number`, `date`, `time`, `movie_id`) VALUES
-(2, 'dw', '09452765455', 1, 'ds', '2021-04-21', '22:59:00', 5),
-(3, 'ew', '132323', 1, 'ds', '2021-04-29', '23:21:00', 3),
-(4, 'dw', '09452765455', 2, 'ewe', '2021-04-19', '16:00:00', 5);
+(120, 'dw', '09452765455', 2, 'B2', '2021-04-21', '13:00:00', 4),
+(119, 'EQWEQE', '09452765455', 3, 'A3', '2021-03-29', '13:00:00', 4),
+(117, 'EQWEQE', '09452765455', 3, 'A4', '2021-03-29', '13:00:00', 4),
+(118, 'EQWEQE', '09452765455', 3, 'A2', '2021-03-29', '13:00:00', 4),
+(111, 'dw', '43434', 2, 'C24', '2021-04-21', '13:00:00', 5),
+(110, 'dw', '09452765455', 1, 'A13', '2021-04-26', '13:00:00', 5);
 
 -- --------------------------------------------------------
 
@@ -98,8 +101,8 @@ CREATE TABLE IF NOT EXISTS `seats` (
 INSERT INTO `seats` (`id`, `seat_group`, `status`) VALUES
 ('A1', 'Box-A', 'AVAILABLE'),
 ('A2', 'Box-A', 'AVAILABLE'),
-('A3', 'Box-A', 'AVAILABLE'),
-('A4', 'Box-A', 'AVAILABLE'),
+('A3', 'Box-A', 'BOOKED'),
+('A4', 'Box-A', 'BOOKED'),
 ('A5', 'Box-A', 'AVAILABLE'),
 ('A6', 'Box-A', 'AVAILABLE'),
 ('A7', 'Box-A', 'AVAILABLE'),
@@ -108,11 +111,11 @@ INSERT INTO `seats` (`id`, `seat_group`, `status`) VALUES
 ('A10', 'Box-A', 'AVAILABLE'),
 ('A11', 'Box-A', 'AVAILABLE'),
 ('A12', 'Box-A', 'AVAILABLE'),
-('A13', 'Box-A', 'AVAILABLE'),
+('A13', 'Box-A', 'BOOKED'),
 ('A14', 'Box-A', 'AVAILABLE'),
 ('A15', 'Box-A', 'AVAILABLE'),
 ('B1', 'Box-B', 'AVAILABLE'),
-('B2', 'Box-B', 'AVAILABLE'),
+('B2', 'Box-B', 'BOOKED'),
 ('B3', 'Box-B', 'AVAILABLE'),
 ('B4', 'Box-B', 'AVAILABLE'),
 ('B5', 'Box-B', 'AVAILABLE'),
@@ -140,7 +143,34 @@ INSERT INTO `seats` (`id`, `seat_group`, `status`) VALUES
 ('C12', 'Box-C', 'AVAILABLE'),
 ('C13', 'Box-C', 'AVAILABLE'),
 ('C14', 'Box-C', 'AVAILABLE'),
-('C15', 'Box-C', 'AVAILABLE');
+('C15', 'Box-C', 'AVAILABLE'),
+('C16', 'Box-C', 'AVAILABLE'),
+('C18', 'Box-C', 'AVAILABLE'),
+('C17', 'Box-C', 'AVAILABLE'),
+('B23', 'Box-B', 'AVAILABLE'),
+('B22', 'Box-B', 'AVAILABLE'),
+('B21', 'Box-B', 'AVAILABLE'),
+('B20', 'Box-B', 'AVAILABLE'),
+('B19', 'Box-B', 'AVAILABLE'),
+('B18', 'Box-B', 'AVAILABLE'),
+('B24', 'Box-B', 'AVAILABLE'),
+('A21', 'Box-A', 'AVAILABLE'),
+('A20', 'Box-A', 'AVAILABLE'),
+('A19', 'Box-A', 'AVAILABLE'),
+('A18', 'Box-A', 'AVAILABLE'),
+('A17', 'Box-A', 'AVAILABLE'),
+('A16', 'Box-A', 'AVAILABLE'),
+('C19', 'Box-C', 'AVAILABLE'),
+('C20', 'Box-C', 'AVAILABLE'),
+('C21', 'Box-C', 'AVAILABLE'),
+('C22', 'Box-C', 'AVAILABLE'),
+('C23', 'Box-C', 'AVAILABLE'),
+('C24', 'Box-C', 'BOOKED'),
+('A23', 'Box-A', 'AVAILABLE'),
+('A22', 'Box-A', 'AVAILABLE'),
+('B25', 'Box-B', 'AVAILABLE'),
+('B26', 'Box-B', 'AVAILABLE'),
+('B27', 'Box-B', 'AVAILABLE');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
