@@ -29,7 +29,7 @@
 </head>
   </head>
   <body class="container">
-        
+    <a class="btn btn-info mt-md-5 text-center" href= history.php target=_blank><h4>View History</h4></a>
     <div class="row">
         <div class="col-md-3 mt-md-5">
                 <?php 
@@ -68,12 +68,6 @@
             </div>
             
         </div>
-    </div>
-    <div class="row">
-       
-                            
-            <a class="btn btn-info " href= history.php target=_blank><h4>View History</h4></a>
-
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
