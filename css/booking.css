@@ -1,12 +1,10 @@
-/* navbar */
-
 .navcon {
-  background-color: #221f1f
+  background-color: #221f1f;
 }
 
 .navitem {
   text-transform: uppercase;
-  font-family: "Architects Daughter", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 90%;
   letter-spacing: 2px;
   transition: 0.5s;
@@ -14,23 +12,23 @@
   color: #046582;
 }
 .navitem:hover {
-  border-bottom: 2px solid #ffaaa7;
-  border-top: 2px solid #ffaaa7;
+  border-bottom: 2px solid #f5f5f1;
+  border-top: 2px solid #f5f5f1;
 }
 
 .navbar-toggler {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: #9c3d54;
-  border: 1px solid #f39189;
+  background-color: #b81d24;
+  border: 1px solid #f5f5f1;
   border-radius: 0.25rem;
 }
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show > .nav-link {
-  color: #ffaaa7;
+  color: #f5f5f1;
   font-weight: bold;
 }
 
@@ -88,13 +86,14 @@
     font-family: 'Montserrat', sans-serif;
   }
   .btnbok {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     transition: 0.5s;
     word-spacing: 4px;
     letter-spacing: 2px;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #bdc761;
     font-weight: bold;
+    color: #221f1f;
     
   }
   .btnbok:hover {
@@ -102,4 +101,41 @@
     font-weight: bold;
     background: #e50914;
   }
-  
+
+  .card-body {
+    
+    background-color: rgba(204, 113, 113, 0.8);
+}
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+    transition: 0.5s;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .2rem;
+  font-family: 'Montserrat', sans-serif;
+  padding: 2px 2px;
+  margin: 2px;
+}
+
+.btn-dark {
+  margin-bottom: 20px;
+  transition: 0.5s;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  background: #bdc761;
+  font-weight: bold;
+  color: #221f1f;
+}
+
+.btn-dark:hover {
+  transition: 0.5s;
+  font-weight: bold;
+  background: #e50914;
+}
