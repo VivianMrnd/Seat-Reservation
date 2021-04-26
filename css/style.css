@@ -1,0 +1,62 @@
+/* navbar */
+  
+.navcon {
+  background-color: #0a0403;
+}
+
+.navitem {
+  text-transform: uppercase;
+  font-family: "Architects Daughter", cursive;
+  font-size: 90%;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  font-weight: bold;
+  color: #046582;
+}
+.navitem:hover {
+  border-bottom: 2px solid #ffaaa7;
+  border-top: 2px solid #ffaaa7;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.50rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: #9c3d54;
+  border: 1px solid #f39189;
+  border-radius: 0.25rem;
+}
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #ffaaa7;
+  font-weight: bold;
+}
+
+/* Headings */
+.heder {
+  min-height: 100vh;
+   background-image:linear-gradient(
+    rgba(200, 200, 200, 0.69),
+    rgba(200, 200, 200, 0.69)
+  ),url(https://wallpaperaccess.com/full/1988378.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #b81d24;
+  padding: 5px;
+  }
+  .grid-item {
+  background-color: rgba(199, 140, 140, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  }
