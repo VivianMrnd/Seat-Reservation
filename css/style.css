@@ -1,5 +1,12 @@
 /* navbar */
   
+.container-fluid {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .navcon {
   background-color: #0a0403;
 }
