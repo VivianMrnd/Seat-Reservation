@@ -2,6 +2,14 @@
   background-color: #221f1f;
 }
 
+.logo {
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+}
 .navitem {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
@@ -9,7 +17,7 @@
   letter-spacing: 2px;
   transition: 0.5s;
   font-weight: bold;
-  color: #046582;
+  color: #ce1212;
 }
 .navitem:hover {
   border-bottom: 2px solid #f5f5f1;

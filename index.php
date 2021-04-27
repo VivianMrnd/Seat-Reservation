@@ -59,7 +59,7 @@ require_once 'php/init.php';
               </a>
               <h2 class="mtitle">The Greatest Showman</h2>
               <div class="text-center">
-                <a class="btn btn-primary btn-sm btnbok" href="TheGreatestShowman.php" type="button" class="btn btn-primary btn-sm btnbok" target=_blank>Book Now</a>
+                <a class="btn btn-primary btn-sm btnbok" href="TheGreatestShowman.php" type="button">Book Now</a>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -68,7 +68,7 @@ require_once 'php/init.php';
               </a>
               <h2>The Spongebob Movie</h2>
               <div class="text-center">
-                <a href="spongebob.php" type="button" class="btn btn-primary btn-sm btnbok" target=_blank>Book Now</a>
+                <a href="spongebob.php" type="button" class="btn btn-primary btn-sm btnbok">Book Now</a>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -77,7 +77,7 @@ require_once 'php/init.php';
               </a>
               <h2>Iron Man</h2>
               <div class="text-center">
-                <a href="iron_man.php" type="button" class="btn btn-primary btn-sm btnbok" target=_blank>Book Now</a>
+                <a href="iron_man.php" type="button" class="btn btn-primary btn-sm btnbok" >Book Now</a>
               </div>
 
             </div>
@@ -87,7 +87,7 @@ require_once 'php/init.php';
               </a>
               <h2>This is the End 2</h2>
               <div class="text-center">
-                <a href="theend.php" type="button" class="btn btn-primary btn-sm btnbok" target=_blank>Book Now</a>
+                <a href="theend.php" type="button" class="btn btn-primary btn-sm btnbok" >Book Now</a>
               </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -96,7 +96,7 @@ require_once 'php/init.php';
               </a>
               <h2>Hangover</h2>
               <div class="text-center">
-                <a href="hangover.php" type="button" class="btn btn-primary btn-sm btnbok text-center" target=_blank>Book Now</a>
+                <a href="hangover.php" type="button" class="btn btn-primary btn-sm btnbok text-center">Book Now</a>
               </div>
 
 

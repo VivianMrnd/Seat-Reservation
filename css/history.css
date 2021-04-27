@@ -1,6 +1,20 @@
 
 /* navbar */
+.container-fluid {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.logo {
+  margin-top: 5px;
+  margin-bottom: 10px;
 
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+}
 .navcon {
     background-color: #0a0403;
   }
@@ -12,7 +26,7 @@
     letter-spacing: 2px;
     transition: 0.5s;
     font-weight: bold;
-    color: #046582;
+   color: #ce1212;
   }
   .navitem:hover {
     border-bottom: 2px solid #ffaaa7;
