@@ -1,0 +1,245 @@
+.logo {
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.navcon {
+  background-color: #221f1f;
+}
+
+html {
+  background-color: #f5f5f1;
+  color: #555;
+  font-family: "Lora", serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+.navitem {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 90%;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  font-weight: bold;
+  color: #ce1212;
+}
+.navitem:hover {
+  border-bottom: 2px solid #f5f5f1;
+  border-top: 2px solid #f5f5f1;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: #b81d24;
+  border: 1px solid #f5f5f1;
+  border-radius: 0.25rem;
+}
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #f5f5f1;
+  font-weight: bold;
+}
+
+/* Headings */
+.heder {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(200, 200, 200, 0.69),
+      rgba(200, 200, 200, 0.69)
+    ),
+    url(https://wallpaperaccess.com/full/1988378.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #b81d24;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(199, 140, 140, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.gallery-container {
+  background-color: #fff;
+  color: #221f1f;
+  min-height: 100vh;
+  border-radius: 20px;
+}
+
+.gallery-container h1 {
+  padding-top: 20px;
+
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  color: #b81d24;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.gallery-container h2 {
+  padding-bottom: 10px;
+  font-size: 27px;
+  text-align: center;
+  margin-top: 2px;
+  color: #221f1f;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+.btnbok {
+  margin-top: 30px;
+  padding: 10px;
+  width: 200px;
+  font-size: 1.5rem;
+  color: black !important;
+  border-color: #e50914 !important;
+  background: #e50914 !important;
+  font-weight: bold !important;
+}
+.btnbok:hover {
+  background-color: #eaeaea !important;
+  color: #e50914 !important;
+}
+
+.card-body {
+  background-color: rgba(204, 113, 113, 0.8);
+}
+
+.card-title {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 2px 2px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.btn-dark {
+  margin-bottom: 20px;
+  transition: 0.5s;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+
+  border-color: #e50914 !important;
+  background: #e50914 !important;
+  font-weight: bold !important;
+  font-weight: bold;
+  color: #221f1f;
+}
+
+.btn-dark:hover {
+  transition: 0.5s;
+  font-weight: bold;
+  background-color: #eaeaea !important;
+  color: #e50914 !important;
+}
+
+.form-control {
+  padding: 0.3rem 0.3rem;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: #221f1f;
+    color:#e50914;
+    font-size: 0.75rem;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .rex{
+    padding: 10px 10px;
+  }
+  
+  
+  .footer-link:link,
+  .footer-link:visited {
+    text-decoration: none;
+    color:#b81d24;
+    transition: 0.5s;
+    margin: 5px;
+    
+  }
+  
+  .footer-link:hover,
+  .footer-link:active {
+    color: #ffaaa7;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-twit:link,
+  .footer-twit:visited {
+    text-decoration: none;
+    color: #b81d24;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-twit:hover,
+  .footer-twit:active {
+    color: #ffaaa7;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-fb:link,
+  .footer-fb:visited {
+    text-decoration: none;
+    color: #b81d24;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-fb:hover,
+  .footer-fb:active {
+    color: #ffaaa7;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-note {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .gallery-container {
+    border-radius: 0;
+  }
+  .btnbok {
+    margin-bottom: 50px;
+  }
+}

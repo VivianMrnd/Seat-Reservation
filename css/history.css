@@ -95,3 +95,71 @@ html {
     }
   }
   
+
+  footer {
+    min-height: 10vh;
+    background-color: #221f1f;
+    color:#e50914;
+    font-size: 0.75rem;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .rex{
+    padding: 10px 10px;
+  }
+  
+  
+  .footer-link:link,
+  .footer-link:visited {
+    text-decoration: none;
+    color:#b81d24;
+    transition: 0.5s;
+    margin: 5px;
+    
+  }
+  
+  .footer-link:hover,
+  .footer-link:active {
+    color: #ffaaa7;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-twit:link,
+  .footer-twit:visited {
+    text-decoration: none;
+    color: #b81d24;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-twit:hover,
+  .footer-twit:active {
+    color: #ffaaa7;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-fb:link,
+  .footer-fb:visited {
+    text-decoration: none;
+    color: #b81d24;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-fb:hover,
+  .footer-fb:active {
+    color: #ffaaa7;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 5px;
+  }
+  
+  .footer-note {
+    font-family: 'Montserrat', sans-serif;
+  }

@@ -10,7 +10,7 @@ require_once 'php/init.php';
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/bookingzx.css" />
+  <link rel="stylesheet" type="text/css" href="css/bookingstyle.css" />
   <link rel="icon" href="img/icon/icon.png" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -40,54 +40,55 @@ require_once 'php/init.php';
         </nav>
       </div>
     </div>
-
-    <div class="container gallery-container">
-      <h1>The Greatest Showman</h1>
-      <div class="text-center">
-      <a class="btn btn-info mt-md-5 text-center btnbok" href=history.php target=_blank>
-        <h4>View History</h4>
-      </a>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mt-md-5">
-          <?php
-          insertR();
-          showForm();
-          ?>
+    <div class="gallery pb-5" id="gallery">
+      <div class="container gallery-container">
+        <h1>The Greatest Showman</h1>
+        <div class="text-center">
+          <a class="btn btn-info mt-md-5 text-center btnbok" href=history.php target=_blank>
+            <h4>View History</h4>
+          </a>
         </div>
-        <div class='col-md-9 mt-md-5'>
-          <div class='row'>
-            <div class='col-md-4'>
-              <h2>BOX A</h2>
-              <div class='grid-container'>
-                <div class='grid-item'>
-                  <?php viewBoxA(); ?>
-                </div>
-              </div>
-            </div>
-            <div class='col-md-4'>
-              <h2>BOX B</h2>
-              <div class='grid-container'>
-                <div class='grid-item'>
-                  <?php viewBoxB(); ?>
-                </div>
-              </div>
-            </div>
-            <div class='col-md-4'>
-              <h2>BOX C</h2>
-              <div class='grid-container'>
-                <div class='grid-item'>
-                  <?php
-                  viewBoxC();
-                  ?>
-                </div>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-md-3 mt-md-5">
+            <?php
+            insertR();
+            showForm();
+            ?>
           </div>
+          <div class='col-md-9 mt-md-5'>
+            <div class='row'>
+              <div class='col-md-4'>
+                <h2>BOX A</h2>
+                <div class='grid-container'>
+                  <div class='grid-item'>
+                    <?php viewBoxA(); ?>
+                  </div>
+                </div>
+              </div>
+              <div class='col-md-4'>
+                <h2>BOX B</h2>
+                <div class='grid-container'>
+                  <div class='grid-item'>
+                    <?php viewBoxB(); ?>
+                  </div>
+                </div>
+              </div>
+              <div class='col-md-4'>
+                <h2>BOX C</h2>
+                <div class='grid-container'>
+                  <div class='grid-item'>
+                    <?php
+                    viewBoxC();
+                    ?>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          </div>
         </div>
       </div>
-      </div>
+    </div>
   </section>
 
   <footer>
