@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Apr 24, 2021 at 07:24 PM
+-- Generation Time: Apr 28, 2021 at 12:18 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.3.21
 
@@ -33,21 +33,20 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `title` varchar(255) COLLATE utf8_bin NOT NULL,
   `duration` varchar(255) COLLATE utf8_bin NOT NULL,
   `time_available` time NOT NULL,
-  `date_showing` date NOT NULL,
-  `end_date` date NOT NULL,
+  `date_showing` date NOT NULL DEFAULT '2021-04-30',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `movies`
 --
 
-INSERT INTO `movies` (`id`, `title`, `duration`, `time_available`, `date_showing`, `end_date`) VALUES
-(1, 'The greatest showman', '2 hours', '13:00:00', '2021-09-11', '2021-09-13'),
-(2, 'Spongebob: the missing spatula movie', '1 hour and 30 minutes', '15:00:00', '2021-09-11', '2021-09-13'),
-(3, 'Iron man 5', '3 hours', '13:00:00', '2021-09-14', '2021-09-16'),
-(4, 'This is the end 2', '2 hours', '16:00:00', '2021-09-14', '2021-09-16'),
-(5, 'Hangover 4', '2 hours', '18:00:00', '2021-09-14', '2021-09-16');
+INSERT INTO `movies` (`id`, `title`, `duration`, `time_available`, `date_showing`) VALUES
+(1, 'The greatest showman', '2 hours', '11:00:00', '2021-04-30'),
+(2, 'Spongebob the movie', '1 hour and 30 minutes', '13:00:00', '2021-04-30'),
+(3, 'Iron man 3', '3 hours', '15:00:00', '2021-04-30'),
+(4, 'This is the end 2', '2 hours', '18:00:00', '2021-04-30'),
+(5, 'Hangover 3', '2 hours', '20:00:00', '2021-04-30');
 
 -- --------------------------------------------------------
 
@@ -62,28 +61,33 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `contact` varchar(255) COLLATE utf8_bin NOT NULL,
   `no_of_seats` int(11) NOT NULL,
   `seat_number` varchar(255) COLLATE utf8_bin NOT NULL,
-  `date` date NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp(),
   `time` time NOT NULL,
   `movie_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `movie_id` (`movie_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=188 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=243 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `reservation`
 --
 
 INSERT INTO `reservation` (`id`, `fullname`, `contact`, `no_of_seats`, `seat_number`, `date`, `time`, `movie_id`) VALUES
-(179, 'dw', '09452765455', 1, 'A2', '2021-09-11', '13:00:00', 1),
+(238, 'dw', '09452765455', 2, 'A2', '2021-04-28', '11:00:00', 2),
+(234, 'dw', '09452765455', 2, 'A2', '2021-04-28', '15:00:00', 3),
+(235, 'dw', '09452765455', 2, 'A8', '2021-04-28', '15:00:00', 3),
+(226, 'dw', '43434', 2, 'A16', '2021-04-28', '11:00:00', 2),
+(225, 'dw', '43434', 2, 'A1', '2021-04-28', '11:00:00', 2),
 (182, 'ew', '09452765455', 1, 'B3', '2021-09-11', '15:00:00', 2),
 (176, 'dw', '09452765455', 1, 'B4', '2021-09-15', '13:00:00', 3),
 (184, 'dw', '09452765455', 1, 'A1', '2021-09-15', '16:00:00', 4),
 (185, 'ew', '09452765455', 1, 'C1', '2021-09-14', '18:00:00', 5),
-(186, 'dw', '09452765455', 2, 'A4', '2021-09-14', '18:00:00', 5),
-(187, 'dw', '09452765455', 2, 'A5', '2021-09-14', '18:00:00', 5),
+(242, 'ew', '09452765455', 2, 'A4', '2021-04-28', '11:00:00', 1),
+(241, 'ew', '09452765455', 2, 'A18', '2021-04-28', '11:00:00', 1),
+(188, 'dw', '09452765455', 1, 'A3', '2021-04-26', '11:00:00', 1),
 (183, 'ew', '09452765455', 1, 'A3', '2021-09-14', '13:00:00', 3),
 (175, 'dw', '09452765455', 1, 'A4', '2021-09-14', '13:00:00', 3),
-(173, 'dw', '09452765455', 2, 'A1', '2021-09-12', '15:00:00', 2),
+(200, 'ew', '09452765455', 2, 'A11', '2021-04-28', '11:00:00', 1),
 (181, 'ew', '43434', 1, 'A3', '2021-09-12', '15:00:00', 2),
 (180, 'dw', '09452765455', 1, 'A1', '2021-09-12', '13:00:00', 1);
 
@@ -106,16 +110,16 @@ CREATE TABLE IF NOT EXISTS `seats` (
 
 INSERT INTO `seats` (`id`, `seat_group`, `status`) VALUES
 ('A1', 'Box-A', 'BOOKED'),
-('A2', 'Box-A', 'BOOKED'),
-('A3', 'Box-A', 'AVAILABLE'),
-('A4', 'Box-A', 'AVAILABLE'),
+('A2', 'Box-A', 'AVAILABLE'),
+('A3', 'Box-A', 'BOOKED'),
+('A4', 'Box-A', 'BOOKED'),
 ('A5', 'Box-A', 'AVAILABLE'),
 ('A6', 'Box-A', 'AVAILABLE'),
 ('A7', 'Box-A', 'AVAILABLE'),
 ('A8', 'Box-A', 'AVAILABLE'),
 ('A9', 'Box-A', 'AVAILABLE'),
 ('A10', 'Box-A', 'AVAILABLE'),
-('A11', 'Box-A', 'AVAILABLE'),
+('A11', 'Box-A', 'BOOKED'),
 ('A12', 'Box-A', 'AVAILABLE'),
 ('A13', 'Box-A', 'AVAILABLE'),
 ('A14', 'Box-A', 'AVAILABLE'),
@@ -163,9 +167,9 @@ INSERT INTO `seats` (`id`, `seat_group`, `status`) VALUES
 ('A21', 'Box-A', 'AVAILABLE'),
 ('A20', 'Box-A', 'AVAILABLE'),
 ('A19', 'Box-A', 'AVAILABLE'),
-('A18', 'Box-A', 'AVAILABLE'),
+('A18', 'Box-A', 'BOOKED'),
 ('A17', 'Box-A', 'AVAILABLE'),
-('A16', 'Box-A', 'AVAILABLE'),
+('A16', 'Box-A', 'BOOKED'),
 ('C19', 'Box-C', 'AVAILABLE'),
 ('C20', 'Box-C', 'AVAILABLE'),
 ('C21', 'Box-C', 'AVAILABLE'),
@@ -174,9 +178,7 @@ INSERT INTO `seats` (`id`, `seat_group`, `status`) VALUES
 ('C24', 'Box-C', 'AVAILABLE'),
 ('A23', 'Box-A', 'AVAILABLE'),
 ('A22', 'Box-A', 'AVAILABLE'),
-('B25', 'Box-B', 'AVAILABLE'),
-('B26', 'Box-B', 'AVAILABLE'),
-('B27', 'Box-B', 'AVAILABLE');
+('B25', 'Box-B', 'AVAILABLE');
 
 -- --------------------------------------------------------
 
@@ -199,8 +201,8 @@ INSERT INTO `seats_hangover` (`id`, `seat_group`, `status`) VALUES
 ('A1', 'Box-A', 'AVAILABLE'),
 ('A2', 'Box-A', 'AVAILABLE'),
 ('A3', 'Box-A', 'AVAILABLE'),
-('A4', 'Box-A', 'BOOKED'),
-('A5', 'Box-A', 'BOOKED'),
+('A4', 'Box-A', 'AVAILABLE'),
+('A5', 'Box-A', 'AVAILABLE'),
 ('A6', 'Box-A', 'AVAILABLE'),
 ('A7', 'Box-A', 'AVAILABLE'),
 ('A8', 'Box-A', 'AVAILABLE'),
@@ -242,8 +244,6 @@ INSERT INTO `seats_hangover` (`id`, `seat_group`, `status`) VALUES
 ('B23', 'Box-B', 'AVAILABLE'),
 ('B24', 'Box-B', 'AVAILABLE'),
 ('B25', 'Box-B', 'AVAILABLE'),
-('B26', 'Box-B', 'AVAILABLE'),
-('B27', 'Box-B', 'AVAILABLE'),
 ('C1', 'Box-C', 'BOOKED'),
 ('C2', 'Box-C', 'AVAILABLE'),
 ('C3', 'Box-C', 'AVAILABLE'),
@@ -288,13 +288,13 @@ CREATE TABLE IF NOT EXISTS `seats_iron` (
 
 INSERT INTO `seats_iron` (`id`, `seat_group`, `status`) VALUES
 ('A1', 'Box-A', 'AVAILABLE'),
-('A2', 'Box-A', 'AVAILABLE'),
+('A2', 'Box-A', 'BOOKED'),
 ('A3', 'Box-A', 'BOOKED'),
 ('A4', 'Box-A', 'BOOKED'),
 ('A5', 'Box-A', 'AVAILABLE'),
 ('A6', 'Box-A', 'AVAILABLE'),
 ('A7', 'Box-A', 'AVAILABLE'),
-('A8', 'Box-A', 'AVAILABLE'),
+('A8', 'Box-A', 'BOOKED'),
 ('A9', 'Box-A', 'AVAILABLE'),
 ('A10', 'Box-A', 'AVAILABLE'),
 ('A11', 'Box-A', 'AVAILABLE'),
@@ -333,8 +333,6 @@ INSERT INTO `seats_iron` (`id`, `seat_group`, `status`) VALUES
 ('B23', 'Box-B', 'AVAILABLE'),
 ('B24', 'Box-B', 'AVAILABLE'),
 ('B25', 'Box-B', 'AVAILABLE'),
-('B26', 'Box-B', 'AVAILABLE'),
-('B27', 'Box-B', 'AVAILABLE'),
 ('C1', 'Box-C', 'AVAILABLE'),
 ('C2', 'Box-C', 'AVAILABLE'),
 ('C3', 'Box-C', 'AVAILABLE'),
@@ -378,8 +376,8 @@ CREATE TABLE IF NOT EXISTS `seats_spongebob` (
 --
 
 INSERT INTO `seats_spongebob` (`id`, `seat_group`, `status`) VALUES
-('A1', 'Box-A', 'BOOKED'),
-('A2', 'Box-A', 'AVAILABLE'),
+('A1', 'Box-A', 'AVAILABLE'),
+('A2', 'Box-A', 'BOOKED'),
 ('A3', 'Box-A', 'BOOKED'),
 ('A4', 'Box-A', 'AVAILABLE'),
 ('A5', 'Box-A', 'AVAILABLE'),
@@ -424,8 +422,6 @@ INSERT INTO `seats_spongebob` (`id`, `seat_group`, `status`) VALUES
 ('B23', 'Box-B', 'AVAILABLE'),
 ('B24', 'Box-B', 'AVAILABLE'),
 ('B25', 'Box-B', 'AVAILABLE'),
-('B26', 'Box-B', 'AVAILABLE'),
-('B27', 'Box-B', 'AVAILABLE'),
 ('C1', 'Box-C', 'AVAILABLE'),
 ('C2', 'Box-C', 'AVAILABLE'),
 ('C3', 'Box-C', 'AVAILABLE'),
@@ -515,8 +511,6 @@ INSERT INTO `seats_this_is_the_end` (`id`, `seat_group`, `status`) VALUES
 ('B23', 'Box-B', 'AVAILABLE'),
 ('B24', 'Box-B', 'AVAILABLE'),
 ('B25', 'Box-B', 'AVAILABLE'),
-('B26', 'Box-B', 'AVAILABLE'),
-('B27', 'Box-B', 'AVAILABLE'),
 ('C1', 'Box-C', 'AVAILABLE'),
 ('C2', 'Box-C', 'AVAILABLE'),
 ('C3', 'Box-C', 'AVAILABLE'),
@@ -541,6 +535,27 @@ INSERT INTO `seats_this_is_the_end` (`id`, `seat_group`, `status`) VALUES
 ('C22', 'Box-C', 'AVAILABLE'),
 ('C23', 'Box-C', 'AVAILABLE'),
 ('C24', 'Box-C', 'AVAILABLE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) COLLATE utf8_bin NOT NULL,
+  `password` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin123');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
