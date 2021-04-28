@@ -66,7 +66,7 @@ font-family: 'Montserrat', sans-serif; */
   
   /* Headings */
   .heder {
-    min-height: 100vh;
+    min-height: 200vh;
     background-image: url(https://wallpaperaccess.com/full/1988378.jpg);
     background-size: cover;
     background-position: center;
@@ -80,7 +80,10 @@ font-family: 'Montserrat', sans-serif; */
     min-height: 100vh;
     
   }
-  
+  /* .gallery{
+    
+  }
+   */
   .btnbok {
     margin-bottom: 20px;
     transition: 0.5s;
@@ -104,7 +107,6 @@ font-family: 'Montserrat', sans-serif; */
   .gallery-container {
     background-color: #fff;
     color: #221f1f;
-    min-height: 100vh;
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
     padding-bottom: 10px;
@@ -167,11 +169,11 @@ font-family: 'Montserrat', sans-serif; */
 
 
   footer {
-    height: 10vh;
+    min-height: 10vh;
     background-color: #221f1f;
     color:#e50914;
     font-size: 0.75rem;
-    padding: 20px 0 20px;
+    padding: 5px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
   }
@@ -232,7 +234,6 @@ font-family: 'Montserrat', sans-serif; */
   
   .footer-note {
     font-family: 'Montserrat', sans-serif;
-    padding: 10px 10px;
   }
   @media (max-width: 768px) {
     body {
@@ -242,5 +243,17 @@ font-family: 'Montserrat', sans-serif; */
     .gallery-container {
       border-radius: 0;
     }
+    .logo {
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 70px;
+      width: auto;
+      
+    }
+    .gallery-container h1 {
+      padding-top: 10px;
+      font-size: 50px;
+    }
+
   }
   

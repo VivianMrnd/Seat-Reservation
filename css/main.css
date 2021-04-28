@@ -233,16 +233,6 @@ section{
 
 
 
-/*header{
- 	min-height: 100vh;
-    background-image:linear-gradient(rgba(20, 20, 20, 0.151),
-     rgba(20, 20, 20, 0.151)), url(bg.jpg);
-    background-position: center;
-    background-size: cover;
-}*/
-
-
-
 /* MOVIES SECTION */
 .movies{
 	min-height: 50vh;
@@ -436,40 +426,7 @@ footer {
    color: #fff;
 }
 
-/*
-@media only screen and (max-width: 1400px) {
-    
-     .hero{
-        padding-bottom: 20px;
-    }
 
-    .slideshow__img{
-        height: 100vh;
-        padding-bottom: 20px;
-    }
-
-    .text-box{
-        width: 300px;
-    }
-
-    .text-box h1{
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 2em;
-    }
-
-    .textbox h3{
-        font-size: 
-    }
-    .banner1, .banner2, .banner3, .banner4{
-    height: 40vh !important;
-    }
-
-    .sched{
-        margin-bottom: 20px;
-    } 
-   
-}*/
 @media(max-width: 320px) {
     .text-box{
         font-size: 7px;

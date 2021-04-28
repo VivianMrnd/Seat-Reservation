@@ -43,7 +43,7 @@ require_once 'php/init.php';
     </div>
 
 
-    <section class="gallery" id="gallery">
+    <div class="gallery pb-5" id="gallery">
       <div class="container gallery-container">
 
         <h1>Now Showing</h1>
@@ -53,7 +53,7 @@ require_once 'php/init.php';
         <div class="tz-gallery">
 
           <div class="row">
-            <div class="col-sm-6 col-md-4">
+            <div class="col-md-4">
               <a class="lightbox">
                 <img src="img/tgs.jpeg" alt="Park">
               </a>
@@ -62,7 +62,7 @@ require_once 'php/init.php';
                 <a class="btn btn-primary btn-sm btnbok" href="TheGreatestShowman.php" type="button">Book Now</a>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
+            <div class="col-md-4">
               <a class="lightbox">
                 <img src="img/spbob.jpg" alt="Park">
               </a>
@@ -71,7 +71,7 @@ require_once 'php/init.php';
                 <a href="spongebob.php" type="button" class="btn btn-primary btn-sm btnbok">Book Now</a>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
+            <div class=" col-md-4">
               <a class="lightbox">
                 <img src="img/Iron_Man.jpg" alt="Park">
               </a>
@@ -81,7 +81,7 @@ require_once 'php/init.php';
               </div>
 
             </div>
-            <div class="col-sm-6 col-md-4">
+            <div class="col-md-4">
               <a class="lightbox">
                 <img src="img/the_end.jpg" alt="Park">
               </a>
@@ -90,7 +90,7 @@ require_once 'php/init.php';
                 <a href="theend.php" type="button" class="btn btn-primary btn-sm btnbok" >Book Now</a>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4">
+            <div class="col-md-4">
               <a class="lightbox">
                 <img src="img/hang.jpg" alt="Park">
               </a>
@@ -108,15 +108,16 @@ require_once 'php/init.php';
 
       </div>
 
-    </section>
-    <footer>
+    </div>
+
+  </section>
+  
+  <footer>
     <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
     <a class="footer-twit" href="https://twitter.com/">Twitter</a>
     <a class="footer-fb" href="https://www.facebook.com/nalcsmn">facebook</a>
     <p class="footer-note">©2021</p>
   </footer>
-
-  </section>
  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

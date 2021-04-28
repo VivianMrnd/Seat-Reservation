@@ -173,7 +173,7 @@
 }
 
 footer {
-  height: 10vh;
+  min-height: 10vh;
   background-color: #221f1f;;
   color:#e50914;
   font-size: 0.75rem;

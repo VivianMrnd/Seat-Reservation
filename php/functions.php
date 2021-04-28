@@ -17,70 +17,71 @@
     function insertR(){
 
         if(!empty($_GET['fullname']) && !empty($_GET['contact'])&& !empty($_GET['seats'])&& !empty($_GET['seat_number'])
-        && !empty($_GET['date'])&& !empty($_GET['time'])&& !empty($_GET['movie']))
+        && !empty($_GET['time'])&& !empty($_GET['movie']))
         {
-            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['date'],$_GET['time'],
+            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['time'],
             $_GET['movie']);
 
             if($insert ->insertReservation()){
-              echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-              <strong>Walang error!</strong>Inserted successful!!!!
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
 
             if(!empty($_GET['seats'])){
-                if($_GET['seats']>1){
-                  echo "
-                  <div class='card bg-info mb-5'>
-                      <div class='card-body'>
-                          <h5 class='card-title'>RESERVATION</h5>
-                          <form method='GET'>
-                              <div class='mb-3'>
-                                  <label class='form-label'>Fullname: </label>
-                                  <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
-                                  <label class='form-label'>Contact #: </label>
-                                  <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
-                              </div>
-                             
-                              <div class='mb-3'>
-                                  <label class='form-label'>number of reserved seat/s: </label>
-                                  <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
-                                  <label class='form-label'>Seat number: </label>
-                                  <input class='form-control' name='seat_number' value='".$_GET['seat_number']."' />
-                              </div>
-                          
-                              <div class='mb-3'>
-                                  <label class='form-label'>Date: </label>
-                                  <select class='form-select' name='date'>
-                                    <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
-                                  </select> 
-                                  <label class='form-label'>Time: </label>
-                                  <select class='form-select' name='time'>
-                                    <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
-                                  </select>
-                                  <label class='form-label'>Movie id: </label>
-                                  <select class='form-select' name='movie'>
-                                    <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
-                                  </select> 
-                              </div>                            
-
-                              <button type='submit' class='btn btn-dark'>Book Seat</button>
-                          </form>  
-                      </div>
-                  </div>
+                 if($_GET['seats']>1){
+                   
+                        echo "
+                        <div class='card bg-info mb-5'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>RESERVATION</h5>
+                                <form method='GET'>
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Fullname: </label>
+                                        <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
+                                        <label class='form-label'>Contact #: </label>
+                                        <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
+                                    </div>
+                                   
+                                    <div class='mb-3'>
+                                        <label class='form-label'>number of reserved seat/s: </label>
+                                        <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
+                                        <label class='form-label'>Seat number: </label>
+                                        <input class='form-control' name='seat_number'/>
+                                    </div>
+                                
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Date: </label>
+                                        <select name='date'>
+                                          <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
+                                        </select> 
+                                        <label class='form-label'>Time: </label>
+                                        <select name='time'>
+                                          <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
+                                        </select> <br>
+                                        <label class='form-label'>Movie id: </label>
+                                        <select name='movie'>
+                                          <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
+                                        </select> 
+                                    </div>                            
       
-                  ";
+                                    <button type='submit' class='btn btn-dark'>Book Seat</button>
+                                </form>  
+                            </div>
+                        </div>
+            
+                        ";
                 
+                 
                     }
                 }
+                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
+                Reservation successful!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
 
                 editStatus();
 
             }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Errorrr</strong> Failed to insert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
+              echo '<script language="javascript">';
+              echo 'alert("Seat Reserved Successfully!")';
+              echo '</script>';
             }
         }
     }
@@ -88,280 +89,284 @@
     function insertR_S(){
 
         if(!empty($_GET['fullname']) && !empty($_GET['contact'])&& !empty($_GET['seats'])&& !empty($_GET['seat_number'])
-        && !empty($_GET['date'])&& !empty($_GET['time'])&& !empty($_GET['movie']))
+        && !empty($_GET['time'])&& !empty($_GET['movie']))
         {
-            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['date'],$_GET['time'],
+            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['time'],
             $_GET['movie']);
 
             if($insert ->insertReservation()){
-              echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-              <strong>Walang error!</strong>Inserted successful!!!!
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
 
             if(!empty($_GET['seats'])){
-                if($_GET['seats']>1){
-                  echo "
-                  <div class='card bg-info mb-5'>
-                      <div class='card-body'>
-                          <h5 class='card-title'>RESERVATION</h5>
-                          <form method='GET'>
-                              <div class='mb-3'>
-                                  <label class='form-label'>Fullname: </label>
-                                  <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
-                                  <label class='form-label'>Contact #: </label>
-                                  <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
-                              </div>
-                             
-                              <div class='mb-3'>
-                                  <label class='form-label'>number of reserved seat/s: </label>
-                                  <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
-                                  <label class='form-label'>Seat number: </label>
-                                  <input class='form-control' name='seat_number' value='".$_GET['seat_number']."' />
-                              </div>
-                          
-                              <div class='mb-3'>
-                                  <label class='form-label'>Date: </label>
-                                  <select class='form-select' name='date'>
-                                    <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
-                                  </select> 
-                                  <label class='form-label'>Time: </label>
-                                  <select class='form-select' name='time'>
-                                    <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
-                                  </select>
-                                  <label class='form-label'>Movie id: </label>
-                                  <select class='form-select' name='movie'>
-                                    <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
-                                  </select> 
-                              </div>                            
-
-                              <button type='submit' class='btn btn-dark'>Book Seat</button>
-                          </form>  
-                      </div>
-                  </div>
+                 if($_GET['seats']>1){
+                   
+                        echo "
+                        <div class='card bg-info mb-5'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>RESERVATION</h5>
+                                <form method='GET'>
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Fullname: </label>
+                                        <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
+                                        <label class='form-label'>Contact #: </label>
+                                        <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
+                                    </div>
+                                   
+                                    <div class='mb-3'>
+                                        <label class='form-label'>number of reserved seat/s: </label>
+                                        <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
+                                        <label class='form-label'>Seat number: </label>
+                                        <input class='form-control' name='seat_number'/>
+                                    </div>
+                                
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Date: </label>
+                                        <select name='date'>
+                                          <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
+                                        </select> 
+                                        <label class='form-label'>Time: </label>
+                                        <select name='time'>
+                                          <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
+                                        </select> <br>
+                                        <label class='form-label'>Movie id: </label>
+                                        <select name='movie'>
+                                          <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
+                                        </select> 
+                                    </div>                            
       
-                  ";
+                                    <button type='submit' class='btn btn-dark'>Book Seat</button>
+                                </form>  
+                            </div>
+                        </div>
+            
+                        ";
                 
+                 
                     }
                 }
+                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
+                Reservation successful!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
 
                 editStatus_S();
 
             }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Errorrr</strong> Failed to insert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
+              echo '<script language="javascript">';
+              echo 'alert("Seat Reserved Successfully!")';
+              echo '</script>';
             }
         }
     }
     function insertR_I(){
 
         if(!empty($_GET['fullname']) && !empty($_GET['contact'])&& !empty($_GET['seats'])&& !empty($_GET['seat_number'])
-        && !empty($_GET['date'])&& !empty($_GET['time'])&& !empty($_GET['movie']))
+        && !empty($_GET['time'])&& !empty($_GET['movie']))
         {
-            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['date'],$_GET['time'],
+            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['time'],
             $_GET['movie']);
 
             if($insert ->insertReservation()){
-              echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-              <strong>Walang error!</strong>Inserted successful!!!!
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
 
             if(!empty($_GET['seats'])){
-                if($_GET['seats']>1){
-                  echo "
-                  <div class='card bg-info mb-5'>
-                      <div class='card-body'>
-                          <h5 class='card-title'>RESERVATION</h5>
-                          <form method='GET'>
-                              <div class='mb-3'>
-                                  <label class='form-label'>Fullname: </label>
-                                  <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
-                                  <label class='form-label'>Contact #: </label>
-                                  <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
-                              </div>
-                             
-                              <div class='mb-3'>
-                                  <label class='form-label'>number of reserved seat/s: </label>
-                                  <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
-                                  <label class='form-label'>Seat number: </label>
-                                  <input class='form-control' name='seat_number' value='".$_GET['seat_number']."' />
-                              </div>
-                          
-                              <div class='mb-3'>
-                                  <label class='form-label'>Date: </label>
-                                  <select class='form-select' name='date'>
-                                    <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
-                                  </select> 
-                                  <label class='form-label'>Time: </label>
-                                  <select class='form-select' name='time'>
-                                    <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
-                                  </select>
-                                  <label class='form-label'>Movie id: </label>
-                                  <select class='form-select' name='movie'>
-                                    <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
-                                  </select> 
-                              </div>                            
-
-                              <button type='submit' class='btn btn-dark'>Book Seat</button>
-                          </form>  
-                      </div>
-                  </div>
+                 if($_GET['seats']>1){
+                   
+                        echo "
+                        <div class='card bg-info mb-5'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>RESERVATION</h5>
+                                <form method='GET'>
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Fullname: </label>
+                                        <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
+                                        <label class='form-label'>Contact #: </label>
+                                        <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
+                                    </div>
+                                   
+                                    <div class='mb-3'>
+                                        <label class='form-label'>number of reserved seat/s: </label>
+                                        <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
+                                        <label class='form-label'>Seat number: </label>
+                                        <input class='form-control' name='seat_number'/>
+                                    </div>
+                                
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Date: </label>
+                                        <select name='date'>
+                                          <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
+                                        </select> 
+                                        <label class='form-label'>Time: </label>
+                                        <select name='time'>
+                                          <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
+                                        </select> <br>
+                                        <label class='form-label'>Movie id: </label>
+                                        <select name='movie'>
+                                          <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
+                                        </select> 
+                                    </div>                            
       
-                  ";
+                                    <button type='submit' class='btn btn-dark'>Book Seat</button>
+                                </form>  
+                            </div>
+                        </div>
+            
+                        ";
                 
+                 
                     }
                 }
+                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
+                Reservation successful!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
 
                 editStatus_I();
 
             }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Errorrr</strong> Failed to insert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
+              echo '<script language="javascript">';
+              echo 'alert("Seat Reserved Successfully!")';
+              echo '</script>';
             }
         }
     }
     function insertR_T(){
 
         if(!empty($_GET['fullname']) && !empty($_GET['contact'])&& !empty($_GET['seats'])&& !empty($_GET['seat_number'])
-        && !empty($_GET['date'])&& !empty($_GET['time'])&& !empty($_GET['movie']))
+        && !empty($_GET['time'])&& !empty($_GET['movie']))
         {
-            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['date'],$_GET['time'],
+            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['time'],
             $_GET['movie']);
 
             if($insert ->insertReservation()){
-              echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-              <strong>Walang error!</strong>Inserted successful!!!!
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
 
             if(!empty($_GET['seats'])){
-                if($_GET['seats']>1){
-                  echo "
-                  <div class='card bg-info mb-5'>
-                      <div class='card-body'>
-                          <h5 class='card-title'>RESERVATION</h5>
-                          <form method='GET'>
-                              <div class='mb-3'>
-                                  <label class='form-label'>Fullname: </label>
-                                  <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
-                                  <label class='form-label'>Contact #: </label>
-                                  <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
-                              </div>
-                             
-                              <div class='mb-3'>
-                                  <label class='form-label'>number of reserved seat/s: </label>
-                                  <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
-                                  <label class='form-label'>Seat number: </label>
-                                  <input class='form-control' name='seat_number' value='".$_GET['seat_number']."' />
-                              </div>
-                          
-                              <div class='mb-3'>
-                                  <label class='form-label'>Date: </label>
-                                  <select class='form-select' name='date'>
-                                    <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
-                                  </select> 
-                                  <label class='form-label'>Time: </label>
-                                  <select class='form-select' name='time'>
-                                    <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
-                                  </select>
-                                  <label class='form-label'>Movie id: </label>
-                                  <select class='form-select' name='movie'>
-                                    <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
-                                  </select> 
-                              </div>                            
-
-                              <button type='submit' class='btn btn-dark'>Book Seat</button>
-                          </form>  
-                      </div>
-                  </div>
+                 if($_GET['seats']>1){
+                   
+                        echo "
+                        <div class='card bg-info mb-5'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>RESERVATION</h5>
+                                <form method='GET'>
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Fullname: </label>
+                                        <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
+                                        <label class='form-label'>Contact #: </label>
+                                        <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
+                                    </div>
+                                   
+                                    <div class='mb-3'>
+                                        <label class='form-label'>number of reserved seat/s: </label>
+                                        <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
+                                        <label class='form-label'>Seat number: </label>
+                                        <input class='form-control' name='seat_number'/>
+                                    </div>
+                                
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Date: </label>
+                                        <select name='date'>
+                                          <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
+                                        </select> 
+                                        <label class='form-label'>Time: </label>
+                                        <select name='time'>
+                                          <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
+                                        </select> <br>
+                                        <label class='form-label'>Movie id: </label>
+                                        <select name='movie'>
+                                          <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
+                                        </select> 
+                                    </div>                            
       
-                  ";
+                                    <button type='submit' class='btn btn-dark'>Book Seat</button>
+                                </form>  
+                            </div>
+                        </div>
+            
+                        ";
                 
+                 
                     }
                 }
+                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
+                Reservation successful!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
 
                 editStatus_T();
 
             }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Errorrr</strong> Failed to insert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
+              echo '<script language="javascript">';
+              echo 'alert("Seat Reserved Successfully!")';
+              echo '</script>';
             }
         }
     }
     function insertR_H(){
 
         if(!empty($_GET['fullname']) && !empty($_GET['contact'])&& !empty($_GET['seats'])&& !empty($_GET['seat_number'])
-        && !empty($_GET['date'])&& !empty($_GET['time'])&& !empty($_GET['movie']))
+        && !empty($_GET['time'])&& !empty($_GET['movie']))
         {
-            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['date'],$_GET['time'],
+            $insert = new insert($_GET['fullname'],$_GET['contact'],$_GET['seats'],$_GET['seat_number'],$_GET['time'],
             $_GET['movie']);
 
             if($insert ->insertReservation()){
-              echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-              <strong>Walang error!</strong>Inserted successful!!!!
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
 
             if(!empty($_GET['seats'])){
-                if($_GET['seats']>1){
-                  echo "
-                  <div class='card bg-info mb-5'>
-                      <div class='card-body'>
-                          <h5 class='card-title'>RESERVATION</h5>
-                          <form method='GET'>
-                              <div class='mb-3'>
-                                  <label class='form-label'>Fullname: </label>
-                                  <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
-                                  <label class='form-label'>Contact #: </label>
-                                  <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
-                              </div>
-                             
-                              <div class='mb-3'>
-                                  <label class='form-label'>number of reserved seat/s: </label>
-                                  <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
-                                  <label class='form-label'>Seat number: </label>
-                                  <input class='form-control' name='seat_number' value='".$_GET['seat_number']."' />
-                              </div>
-                          
-                              <div class='mb-3'>
-                                  <label class='form-label'>Date: </label>
-                                  <select class='form-select' name='date'>
-                                    <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
-                                  </select> 
-                                  <label class='form-label'>Time: </label>
-                                  <select class='form-select' name='time'>
-                                    <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
-                                  </select>
-                                  <label class='form-label'>Movie id: </label>
-                                  <select class='form-select' name='movie'>
-                                    <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
-                                  </select> 
-                              </div>                            
-
-                              <button type='submit' class='btn btn-dark'>Book Seat</button>
-                          </form>  
-                      </div>
-                  </div>
+                 if($_GET['seats']>1){
+                   
+                        echo "
+                        <div class='card bg-info mb-5'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>RESERVATION</h5>
+                                <form method='GET'>
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Fullname: </label>
+                                        <input type='text' class='form-control' name='fullname' value='".$_GET['fullname']."'>
+                                        <label class='form-label'>Contact #: </label>
+                                        <input type='text' class='form-control' name='contact' value='".$_GET['contact']."'>
+                                    </div>
+                                   
+                                    <div class='mb-3'>
+                                        <label class='form-label'>number of reserved seat/s: </label>
+                                        <input type='number' class='form-control'name='seats' value='".$_GET['seats']."'>
+                                        <label class='form-label'>Seat number: </label>
+                                        <input class='form-control' name='seat_number'/>
+                                    </div>
+                                
+                                    <div class='mb-3'>
+                                        <label class='form-label'>Date: </label>
+                                        <select name='date'>
+                                          <option selected value='".$_GET['date']."'>".$_GET['date']."</option>
+                                        </select> 
+                                        <label class='form-label'>Time: </label>
+                                        <select name='time'>
+                                          <option selected value='".$_GET['time']."'>".$_GET['time']."</option>
+                                        </select> <br>
+                                        <label class='form-label'>Movie id: </label>
+                                        <select name='movie'>
+                                          <option selected value='".$_GET['movie']."'>".$_GET['movie']."</option>
+                                        </select> 
+                                    </div>                            
       
-                  ";
+                                    <button type='submit' class='btn btn-dark'>Book Seat</button>
+                                </form>  
+                            </div>
+                        </div>
+            
+                        ";
                 
+                 
                     }
                 }
+                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
+                Reservation successful!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
 
                 editStatus_H();
 
             }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Errorrr</strong> Failed to insert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
+              echo '<script language="javascript">';
+              echo 'alert("Seat Reserved Successfully!")';
+              echo '</script>';
             }
         }
     }
@@ -534,41 +539,24 @@
     function editStatus(){
         if(!empty($_GET['seat_number'])){
             $edit = new edit($_GET['seat_number']);
-            if($edit->booked()){
-
-                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status successfully !
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-  
-            }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status!!!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-              
-            //   $edit ->booked();
-            //   $edit = new edit($_GET['seat_number']);
-            //   echo($_GET['seat_number']);
-             
-              
-            }
+            $edit->booked();
+               
         }
     }
 
     function editStatus_A(){
         if(!empty($_GET['Seatnum'])){
             $edit = new edit($_GET['Seatnum']);
-            if($edit->available()){
+          if($edit->available()){
 
                 echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status to available successfully !
+                Reservation cancelled!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
   
             }else{
                 echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status to available!!!
+                <strong>Error!</strong>Failed to cancel reservation!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
              
@@ -581,21 +569,8 @@
      function editStatus_S(){
         if(!empty($_GET['seat_number'])){
             $edit = new edit($_GET['seat_number']);
-            if($edit->booked_S()){
+            $edit->booked_S();
 
-                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status successfully !
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-  
-            }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status!!!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-             
-              
-            }
         }
     }
 
@@ -605,13 +580,13 @@
             if($edit->available_S()){
 
                 echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status to available successfully !
+                Reservation cancelled!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
   
             }else{
                 echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status to available!!!
+                <strong>Error!</strong>Failed to cancel reservation!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
              
@@ -624,21 +599,7 @@
      function editStatus_I(){
         if(!empty($_GET['seat_number'])){
             $edit = new edit($_GET['seat_number']);
-            if($edit->booked_I()){
-
-                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status successfully !
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-  
-            }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status!!!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-             
-              
-            }
+           $edit->booked_I();
         }
     }
 
@@ -648,13 +609,13 @@
             if($edit->available_I()){
 
                 echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status to available successfully !
+                Reservation cancelled!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
   
             }else{
                 echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status to available!!!
+                <strong>Error!</strong>Failed to cancel reservation!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
              
@@ -667,21 +628,7 @@
      function editStatus_T(){
         if(!empty($_GET['seat_number'])){
             $edit = new edit($_GET['seat_number']);
-            if($edit->booked_T()){
-
-                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status successfully !
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-  
-            }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status!!!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-             
-              
-            }
+            $edit->booked_T();
         }
     }
 
@@ -691,13 +638,13 @@
             if($edit->available_T()){
 
                 echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status to available successfully !
+                Reservation cancelled!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
   
             }else{
                 echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status to available!!!
+                <strong>Error!</strong>Failed to cancel reservation!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
              
@@ -710,21 +657,8 @@
       function editStatus_H(){
         if(!empty($_GET['seat_number'])){
             $edit = new edit($_GET['seat_number']);
-            if($edit->booked_H()){
+           $edit->booked_H();
 
-                echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status successfully !
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-  
-            }else{
-                echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status!!!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-             
-              
-            }
         }
     }
 
@@ -734,13 +668,13 @@
             if($edit->available_H()){
 
                 echo '<div class="alert alert-info alert-dismissible fade show fixed-bottom" role="alert">
-                Changed status to available successfully !
+                Reservation cancelled!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
   
             }else{
                 echo '<div class="alert alert-danger alert-dismissible fade show fixed-bottom" role="alert">
-                <strong>Error!</strong>Failed to changed status to available!!!
+                <strong>Error!</strong>Failed to cancel reservation!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
              
