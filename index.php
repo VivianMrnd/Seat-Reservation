@@ -235,6 +235,9 @@ require_once 'php/init.php';
     <footer>
       <div class="footer-container">
             <p class="ft2">Copyright for Educational Purposes.
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
             </p>
       </div>
      </footer>
