@@ -1,0 +1,598 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, a, *{
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    
+}
+
+header{
+
+}
+
+.navbar{
+    z-index:10;
+}
+
+.img-fluid {
+	margin-left: 50px;
+    max-width: 100%!important;
+    height: 60px!important;
+}
+
+.d-flex {
+    margin: auto;
+    margin-right: 60px;
+}
+
+.btn-outline-success {
+    color: black!important;
+    border-color: #E50914!important;
+    background: #E50914!important;
+    font-weight: bold!important;
+}
+
+.btn-outline-success:hover{
+	background-color:#EAEAEA!important;
+	color: #E50914!important;
+}
+
+
+/*HEADER*/
+
+
+section{
+
+}
+#home{
+    min-height: 95vh;
+}
+.banners{
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.images img{
+  height: 100%;
+  width: 100%;
+}
+
+.banner1, .banner2, .banner3, .banner4{
+    /* height:98vh; */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70;
+}
+
+.slideshow__img{
+    width: 100%;
+    position: absolute;
+    height: 88.8vh;
+}
+
+
+.text-box{
+    width:600px;
+    position: absolute;
+    top: 80px;
+    left:100px;
+    color: white;
+    animation: textup 12s linear infinite;
+    transform: translateY(100px);
+}
+
+.text-box h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 4em;
+
+}
+
+.text-box h2{
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.text-box p{
+    font-size: 18px;
+    margin:0px;
+    font-weight: bold;
+}
+
+.banner1{
+    animation: slide1 12s linear infinite;
+}
+
+.banner2{
+    animation: slide2 12s linear infinite;
+}
+
+.banner3{
+    animation: slide3 12s linear infinite;
+}
+
+.banner4{
+    animation: slide4 12s linear infinite;
+}
+
+@keyframes slide1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes slide2{
+    0%{
+        visibility: hidden ;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes slide3{
+    0%{
+        visibility: hidden ;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes slide4{
+    0%{
+        visibility: hidden ;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes textup{
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.text-box1{
+    animation-delay: 0s;
+}
+
+.text-box2{
+    animation-delay: 3s;
+}
+
+.text-box3{
+    animation-delay: 6s;
+}
+
+.text-box4{
+    animation-delay: 9s;
+}
+
+
+
+
+/*header{
+ 	min-height: 100vh;
+    background-image:linear-gradient(rgba(20, 20, 20, 0.151),
+     rgba(20, 20, 20, 0.151)), url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+}*/
+
+
+
+/* MOVIES SECTION */
+.movies{
+	min-height: 50vh;
+}
+
+.headtext{
+	color: white;
+	padding-top: 50px;
+	margin-left: 90px;
+}
+.headtext_N{
+    color: white;
+	padding-top: 80px;
+	margin-left: 90px;
+}
+
+.headtext1{
+	color: white;
+	padding-top: 10px;
+	margin-left: 90px;
+}
+
+.divider{
+	margin-left: 90px;
+	height: 5px;
+	width: 15vh;
+	background-color:#E50914;
+	margin-bottom: 20px;
+}
+
+.container{
+	padding-bottom: 20px;
+}
+
+
+
+/*IMAGE OVERLAY*/
+.image {
+    position: relative;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: #009578;
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.moviephoto{
+	width:100%;
+	padding-bottom:20px;
+}
+
+
+
+
+
+/*SCHEDULE*/
+
+/*
+
+
+*/
+.sched-row{
+
+}
+
+.sched{
+    margin: auto;
+    margin-bottom: 20px;
+    border-width:2px;
+    border-style:solid;
+    border-color:#E50914;
+    border-radius: 20px;
+}
+
+.sched-div{
+    margin: 15px;
+
+}
+
+.sched-div p, h1, h2{
+    color: #fff;
+}
+
+.movie-title{
+    font-weight: bold;
+    text-align: center;
+}
+
+.divider2{
+    margin:auto;
+    height: 5px;
+    width: 15vh;
+    background-color:#E50914;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.datetime{
+    text-align: center;
+}
+
+.btn-div{
+    display: flex;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+}
+
+.booknow {
+    color: black;
+    border-color: #E50914!important;
+    background: #E50914!important;
+    font-weight: bold!important;
+
+}
+
+.booknow:hover{
+    background-color:#EAEAEA!important;
+    color: #E50914!important;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    min-height: 10vh;
+    background-color: #1c1c1c;
+}
+
+.ft2 {
+    color: #fff;
+    font-size: 100%;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.rtbutton{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+}
+.rtbutton a:link,
+.rtbutton a:visited
+{
+   color: #fff;
+}
+
+/*
+@media only screen and (max-width: 1400px) {
+    
+     .hero{
+        padding-bottom: 20px;
+    }
+
+    .slideshow__img{
+        height: 100vh;
+        padding-bottom: 20px;
+    }
+
+    .text-box{
+        width: 300px;
+    }
+
+    .text-box h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2em;
+    }
+
+    .textbox h3{
+        font-size: 
+    }
+    .banner1, .banner2, .banner3, .banner4{
+    height: 40vh !important;
+    }
+
+    .sched{
+        margin-bottom: 20px;
+    } 
+   
+}*/
+@media(max-width: 320px) {
+    .text-box{
+        font-size: 7px;
+        width:200px;
+        position: absolute;
+        top: 40px;
+        left:30px;
+    }
+    .img-fluid {
+        margin-left: 30px;
+        max-width: 100%!important;
+        height: 45px!important;
+    }
+   
+    .slideshow__img{
+        width: 100%;
+        position: none;
+        height: 65vh;
+    }
+    #home{
+        min-height: 70vh; 
+    }
+    .banners{
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media (min-width:321px) and (max-width: 820px){
+    .text-box{
+        font-size: 8px;
+        width:200px;
+        position: absolute;
+        top: 40px;
+        left:30px;
+    }
+    .img-fluid {
+        margin-left: 30px;
+        max-width: 100%!important;
+        height: 45px!important;
+    }
+   
+    .slideshow__img{
+        width: 100%;
+        position: none;
+        height: 65vh;
+    }
+    #home{
+        min-height: 70vh; 
+    }
+}
+
+
+
+/*LOGIN HTML*/
+.login{
+    min-height: 100vh;
+    position: relative;
+    background-image: url(https://thefriendlyfilmfan.weebly.com/uploads/1/2/3/8/123881315/movies-of-2011_orig.png);
+    background-size: cover;
+}
+
+.loginpage{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.loginform{
+
+    -webkit-box-shadow: 4px 7px 49px 27px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 7px 49px 27px rgba(0,0,0,0.75);
+    box-shadow: 4px 7px 49px 27px rgba(0,0,0,0.75);
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    display: inline-block;
+    margin-top:80px;
+    border-radius: 20px;
+   
+}
+
+.login-title{
+    padding-top: 60px;
+    display: flex;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=text], input[type=password] {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+}
+
+.loginbtn{
+    margin-top:30px;
+    padding: 10px;
+    width: 200px;
+    color: black!important;
+    border-color: #E50914!important;
+    background: #E50914!important;
+    font-weight: bold!important;
+}
+
+.loginbtn:hover{
+    background-color:#EAEAEA!important;
+    color: #E50914!important;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 690px) {
+
+  .loginform{
+    width: auto;
+    height: 500px;
+    }
+
+}

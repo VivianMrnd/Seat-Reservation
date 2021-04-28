@@ -766,5 +766,25 @@
             }
         }
     }
+
+    function checkcred(){
+        if(!empty($_POST['username']) && !empty($_POST['password']) ){
+            $checker = new credcheck($_POST['username'],$_POST['password']);
+            if ($checker ->checker() ) {
+               
+                header("Location: booking.php");
+      
+            
+            }else{
+        
+                echo '<script language="javascript">';
+                echo 'alert("No such User")';
+                echo '</script>';
+      
+            }   
+        }
+
+
+    }
 ?>
 

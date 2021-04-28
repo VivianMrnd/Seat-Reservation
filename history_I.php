@@ -11,7 +11,7 @@ require_once 'php/init.php';
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/history.css" />
-    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/STARFILMS.png" />
     <title>SEAT RESERVATION HISTORY</title>
 </head>
     <style>
@@ -31,7 +31,7 @@ require_once 'php/init.php';
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav ml-auto">
-                            <a class="nav-item nav-link active navitem" href="index.php">Home <span class="sr-only"></span></a>
+                            <a class="nav-item nav-link active navitem" href="booking.php">Home <span class="sr-only"></span></a>
 
                         </div>
                     </div>

@@ -262,7 +262,7 @@ class view extends config{
                         <div class='mb-3'>
                             <label class='form-label'>Movie:</label>                     
                             <select class='form-select' name='movie'>
-                                <option selected value= '2'>Spongebob: the missing spatula movie</option>
+                                <option selected value= '2'>Spongebob the Movie</option>
                             </select> 
                         </div>
                        
